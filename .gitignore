@@ -14,6 +14,12 @@ htmlcov/
 data/
 exports/
 backups/
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.sqlite-*
+*.db
+*.db-*
 .env
 .env.*
 !.env.example

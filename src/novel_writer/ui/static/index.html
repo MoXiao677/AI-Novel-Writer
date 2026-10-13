@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>AI-Novel-Writer · 写作工作台</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="AI-Novel-Writer 首页"><span class="brand-mark">N</span><span>Novel Writer<small>长篇小说创作工作台</small></span></a>
+    <div class="library-heading"><span>我的书架</span><span id="project-count">0</span></div>
+    <button id="new-project" class="new-project" type="button">＋ 创建小说</button>
+    <nav id="project-list" aria-label="小说项目"><p class="sidebar-empty">正在读取书架…</p></nav>
+    <div class="sidebar-footer"><span class="offline-dot"></span> 离线创作模式<small>内容保存在这台电脑上</small></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span>AI-Novel-Writer <span class="version-tag">v0.2</span></span><div class="topbar-actions"><button id="reload-project" class="quiet" type="button" disabled>重新读取</button><a id="export-project" class="quiet" hidden>导出已保存数据</a></div></header>
+    <main id="main">
+      <div class="project-header"><div><p class="eyebrow">WRITING WORKSPACE</p><h1 id="book-title">把故事，一章章写下来。</h1><p id="book-description">从一个想法开始，让人物、情节与正文各归其位。</p></div><span id="save-state" class="save-state">尚未选择小说</span></div>
+      <nav id="tabs" class="tabs" aria-label="创作模块"></nav>
+      <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
+      <section id="content" class="content" aria-label="创作内容"><p>正在打开工作台…</p></section>
+    </main>
+    <footer class="workspace-footer">先整理故事，再写出自己的声音。<span>模型调用尚未启用</span></footer>
+  </div>
+  <dialog id="create-dialog" aria-labelledby="dialog-title">
+    <form id="create-form"><div class="dialog-heading"><h2 id="dialog-title">创建小说</h2><button id="close-dialog" type="button" class="quiet" aria-label="关闭">×</button></div><div id="dialog-fields"></div><p id="dialog-error" class="error-text" role="alert"></p><div class="form-footer"><span>创建后立即保存到本地</span><button class="primary" type="submit">创建</button></div></form>
+  </dialog>
+</body>
+</html>

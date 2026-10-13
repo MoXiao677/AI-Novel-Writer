@@ -93,4 +93,41 @@ AI-Novel-Writer 旨在帮助作者减少小说创作过程中的重复劳动，�
 
 ## 项目状态
 
-当前处于规划与初始开发阶段，功能尚未全部实现。
+当前已完成 v0.2 离线最小可运行版本，长期目标中的 AI 功能将逐步实现。
+
+## 现在如何启动
+
+Windows 用户打开项目文件夹，双击 `start.bat`，浏览器会打开本机写作工作台。请保留启动窗口，写作后点击页面保存，再按 Ctrl+C 停止软件。
+
+其他系统或已安装 Python 的用户，在项目根目录运行：
+
+```bash
+python run.py
+```
+
+要求 Python 3.11 或更高版本。运行只使用 Python 标准库，无需安装第三方包，也无需模型密钥。这个 Windows 启动脚本还支持当前电脑已有的 Codex Python 运行环境。
+
+## 当前可以使用的功能
+
+- 创建、打开小说，管理全书大纲、章节细纲和每章 IDEA。
+- 手动编辑正文、人物、世界观与文风规则。
+- 内容保存到 `data/novels.sqlite3`，关闭重开后仍能读取。
+- 查看章节历史，恢复旧版时追加新草稿；修改已确认章节需要作者明确授权。
+- 导出已保存小说的 JSON 副本；当前尚未提供导入备份按钮。
+- 导入本地 `SKILL.md` 或同一技能文件夹内的 Markdown 资料，保存原文供查看。
+- 软件内的“使用指南”为小说作者和 AI 助手说明流程、保存与协作约定。
+
+正文生成、DeepSeek 审核、Gemini 修改、自动时间线检查、剧情检查、全书质量检查和全书大纲自动更新仅预留独立模块，当前不调用任何真实模型 API。Skills 导入不会执行脚本，也不会自动安装到 Codex。
+
+界面采用本项目自己的设计。小说和私人资料留在本地数据库，GitHub 用于保存软件代码与公开示例；两者应分别备份。
+
+详细启动说明见 [docs/getting-started.md](docs/getting-started.md)，使用指南见 [docs/user-guide.md](docs/user-guide.md)，目录与模块见 [docs/architecture.md](docs/architecture.md)。
+
+## 开发验证
+
+```bash
+python -m unittest discover -s tests -v
+python scripts/validate_example.py
+```
+
+测试使用临时数据库，不修改作者的实际小说。可选浏览器验收需要开发者的 Playwright 环境，说明见启动文档。

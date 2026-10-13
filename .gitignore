@@ -1,0 +1,25 @@
+# Python 缓存与本地环境
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 作者的实际小说、临时导出及私人设置
+data/
+exports/
+backups/
+.env
+.env.*
+!.env.example
+
+# 本地编辑器与系统文件
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

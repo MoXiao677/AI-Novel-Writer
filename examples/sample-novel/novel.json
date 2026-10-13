@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "project": {
+    "id": "demo-project",
+    "created_at": "2026-10-13T02:00:00+00:00",
+    "updated_at": "2026-10-13T02:10:00+00:00",
+    "title": "雾港来信",
+    "author": "虚构示例",
+    "genre": "悬疑",
+    "summary": "一封迟到十年的信，让两位旧友重新调查雾港灯塔的秘密。",
+    "language": "zh-CN",
+    "status": "writing"
+  },
+  "book_outline": {
+    "id": "demo-book-outline",
+    "project_id": "demo-project",
+    "created_at": "2026-10-13T02:00:00+00:00",
+    "updated_at": "2026-10-13T02:00:00+00:00",
+    "theme": "面对真相与修复信任",
+    "premise": "旧灯塔拆除前，一封无署名的信出现在修船铺。",
+    "main_plot": "林舟与沈岚循着信中的线索，发现十年前的失踪案另有隐情。",
+    "ending": "两人公开证据，救出隐居的证人，并保留灯塔作为纪念。",
+    "key_events": ["发现来信", "寻找失踪证人", "公开灯塔日志"],
+    "volumes": [
+      {
+        "number": 1,
+        "title": "重返雾港",
+        "summary": "两位旧友重新相遇，决定共同调查。",
+        "chapter_ids": ["demo-chapter-1"]
+      }
+    ],
+    "status": "ready"
+  },
+  "chapter_outlines": [
+    {
+      "id": "demo-chapter-outline-1",
+      "project_id": "demo-project",
+      "created_at": "2026-10-13T02:00:00+00:00",
+      "updated_at": "2026-10-13T02:00:00+00:00",
+      "chapter_id": "demo-chapter-1",
+      "core_idea": "林舟收到来信，向旧友沈岚求助。",
+      "objective": "引出灯塔秘密，并交代两位主角的旧日关系。",
+      "character_ids": ["demo-character-lin", "demo-character-shen"],
+      "scenes": [
+        {
+          "order": 1,
+          "summary": "林舟在修船铺门口发现潮湿的信封。",
+          "character_ids": ["demo-character-lin"],
+          "location": "雾港修船铺",
+          "story_time": "故事第 1 天清晨"
+        },
+        {
+          "order": 2,
+          "summary": "沈岚辨认出信纸上的旧灯塔印章。",
+          "character_ids": ["demo-character-lin", "demo-character-shen"],
+          "location": "雾港档案室",
+          "story_time": "故事第 1 天上午"
+        }
+      ],
+      "story_time": "故事第 1 天",
+      "status": "ready"
+    }
+  ],
+  "characters": [
+    {
+      "id": "demo-character-lin",
+      "project_id": "demo-project",
+      "created_at": "2026-10-13T02:00:00+00:00",
+      "updated_at": "2026-10-13T02:00:00+00:00",
+      "name": "林舟",
+      "role": "主角，修船师",
+      "personality": "谨慎、重承诺，遇到旧事时容易犹豫。",
+      "background": "十年前离开雾港，近期回来接手家中的修船铺。",
+      "goals": ["查明信件来源", "修复与沈岚的信任"],
+      "notes": "人物信息仅为虚构演示。",
+      "relationships": [
+        {
+          "target_character_id": "demo-character-shen",
+          "relation": "旧友",
+          "description": "曾因一次误会多年没有往来。"
+        }
+      ]
+    },
+    {
+      "id": "demo-character-shen",
+      "project_id": "demo-project",
+      "created_at": "2026-10-13T02:00:00+00:00",
+      "updated_at": "2026-10-13T02:00:00+00:00",
+      "name": "沈岚",
+      "role": "主角，档案管理员",
+      "personality": "直率、细心，愿意为证据花时间。",
+      "background": "长期整理雾港地方档案，熟悉旧灯塔历史。",
+      "goals": ["找回遗失的灯塔日志"],
+      "notes": "",
+      "relationships": [
+        {
+          "target_character_id": "demo-character-lin",
+          "relation": "旧友",
+          "description": "期待林舟解释当年的离开。"
+        }
+      ]
+    }
+  ],
+  "chapters": [
+    {
+      "id": "demo-chapter-1",
+      "project_id": "demo-project",
+      "created_at": "2026-10-13T02:00:00+00:00",
+      "updated_at": "2026-10-13T02:10:00+00:00",
+      "number": 1,
+      "title": "潮声中的信",
+      "content": "清晨，雾港的潮声还没有退去。林舟推开修船铺的门，在门槛旁发现一封被海雾打湿的信。\n\n信上只有一句话：灯塔熄灭的那一夜，你看见的并不是真相。\n\n他把信带到档案室。沈岚看见纸角的印章，沉默片刻，拉开了存放旧灯塔日志的抽屉。",
+      "status": "confirmed",
+      "current_version_id": "demo-version-2"
+    }
+  ],
+  "versions": [
+    {
+      "id": "demo-version-1",
+      "project_id": "demo-project",
+      "entity_type": "chapter",
+      "entity_id": "demo-chapter-1",
+      "version_number": 1,
+      "created_at": "2026-10-13T02:05:00+00:00",
+      "previous_version_id": null,
+      "change_note": "保存第一版手写草稿。",
+      "source": "manual",
+      "snapshot": {
+        "id": "demo-chapter-1",
+        "project_id": "demo-project",
+        "created_at": "2026-10-13T02:00:00+00:00",
+        "updated_at": "2026-10-13T02:05:00+00:00",
+        "number": 1,
+        "title": "潮声中的信",
+        "content": "林舟在修船铺门口发现一封信。信中提到十年前的灯塔。他决定找沈岚商量。",
+        "status": "draft"
+      }
+    },
+    {
+      "id": "demo-version-2",
+      "project_id": "demo-project",
+      "entity_type": "chapter",
+      "entity_id": "demo-chapter-1",
+      "version_number": 2,
+      "created_at": "2026-10-13T02:10:00+00:00",
+      "previous_version_id": "demo-version-1",
+      "change_note": "补充环境和沈岚的反应，示例作者确认此版。",
+      "source": "manual",
+      "snapshot": {
+        "id": "demo-chapter-1",
+        "project_id": "demo-project",
+        "created_at": "2026-10-13T02:00:00+00:00",
+        "updated_at": "2026-10-13T02:10:00+00:00",
+        "number": 1,
+        "title": "潮声中的信",
+        "content": "清晨，雾港的潮声还没有退去。林舟推开修船铺的门，在门槛旁发现一封被海雾打湿的信。\n\n信上只有一句话：灯塔熄灭的那一夜，你看见的并不是真相。\n\n他把信带到档案室。沈岚看见纸角的印章，沉默片刻，拉开了存放旧灯塔日志的抽屉。",
+        "status": "confirmed"
+      }
+    }
+  ]
+}
